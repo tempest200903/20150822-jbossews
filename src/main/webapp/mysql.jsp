@@ -12,6 +12,8 @@
 <%=ManagementFactory.getMemoryMXBean().getHeapMemoryUsage()%>
 <%
 
+    Class.forName("com.mysql.jdbc.Driver");
+
     String host = System.getenv("OPENSHIFT_MYSQL_DB_HOST");
     String port = System.getenv("OPENSHIFT_MYSQL_DB_PORT");
     String url = "jdbc:mysql://"+host+":"+port+"/teedix";
