@@ -15,7 +15,7 @@
     String host = System.getenv("OPENSHIFT_MYSQL_DB_HOST");
     String port = System.getenv("OPENSHIFT_MYSQL_DB_PORT");
     String url = "jdbc:mysql://"+host+":"+port+"/teedix";
-    DriverManager.getConnection(url);
+    java.sql.DriverManager.getConnection(url);
 
 %>
 
