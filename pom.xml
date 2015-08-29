@@ -36,6 +36,14 @@
     <maven.compiler.target>1.7</maven.compiler.target>
   </properties>
 
+  <!-- 追記 -->
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>1.0.2.RELEASE</version>
+  </parent>
+  <!-- 追記 -->
+
   <dependencies>
 
     <dependency>
@@ -50,6 +58,13 @@
       <version>3.0.1</version>
       <scope>provided</scope>
     </dependency>
+
+    <!-- 追記 -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    <!-- 追記 -->
 
   </dependencies>
 
