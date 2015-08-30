@@ -1,5 +1,5 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>jbossews</groupId>
   <artifactId>jbossews</artifactId>
@@ -59,23 +59,30 @@
       <scope>provided</scope>
     </dependency>
 
-    <!-- 追記 -->
+    <!-- Annotation Type SpringBootApplication is Since: 1.2.0 -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
+      <version>1.2.5.RELEASE</version>
     </dependency>
-    <!-- 追記 -->
+
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-tomcat</artifactId>
+      <scope>provided</scope>
+    </dependency>
 
   </dependencies>
 
   <profiles>
     <profile>
-      <!-- When built in OpenShift the 'openshift' profile will be used when
-           invoking mvn. -->
-      <!-- Use this profile for any OpenShift specific customization your app
-           will need. -->
-      <!-- By default that is to put the resulting archive into the 'webapps'
-           folder. -->
+      <!-- When built in OpenShift the 'openshift' profile will be used when 
+        invoking mvn. -->
+      <!-- Use this profile for any OpenShift specific customization your 
+        app will need. -->
+      <!-- By default that is to put the resulting archive into the 'webapps' 
+        folder. -->
       <!-- http://maven.apache.org/guides/mini/guide-building-for-different-environments.html -->
       <id>openshift</id>
       <build>

@@ -10,7 +10,7 @@ public class HelloWorldService {
 	private String name;
 
 	public String getHelloMessage() {
-		return "Hello " + this.name + " (2015/08/29)";
+		return "Hello " + this.name + " (2015/08/30)";
 	}
 
 }
